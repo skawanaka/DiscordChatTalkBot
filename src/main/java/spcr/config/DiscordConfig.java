@@ -10,4 +10,6 @@ import lombok.ToString;
 public class DiscordConfig {
 	@Configuration("token")
 	private String token;
+	@Configuration("ready.join.voice.channel.id")
+	private long voiceChannelId;
 }

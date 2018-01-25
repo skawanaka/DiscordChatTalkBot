@@ -25,10 +25,6 @@ public class MessageReactListener {
 		try {
 			final IMessage message = event.getMessage();
 			final IGuild guild = message.getGuild();
-			if (guild.getLongID() != Listener.GUILD_ID) {
-				log.info("joinしているChannelのサーバで起きたEventではありません");
-				return;
-			}
 			final String content = message.getContent();
 			final String speechContent = content.replaceAll("<.+>", "");
 			if (speechContent.isEmpty()) {
