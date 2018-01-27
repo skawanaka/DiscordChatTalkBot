@@ -10,7 +10,6 @@ import com.amazonaws.services.polly.model.OutputFormat;
 import lombok.extern.slf4j.Slf4j;
 import spcr.speakbot.aws.Synthesizer;
 import sx.blah.discord.api.events.EventSubscriber;
-import sx.blah.discord.api.events.IListener;
 import sx.blah.discord.handle.audio.IAudioManager;
 import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedEvent;
 import sx.blah.discord.handle.obj.IGuild;
@@ -18,7 +17,7 @@ import sx.blah.discord.handle.obj.IMessage;
 import sx.blah.discord.util.audio.providers.AudioInputStreamProvider;
 
 @Slf4j
-public class MessageSpeaker implements IListener<MessageReceivedEvent> {
+public class MessageSpeaker {
 	private final Synthesizer polly = new Synthesizer();
 
 	@EventSubscriber
@@ -39,11 +38,5 @@ public class MessageSpeaker implements IListener<MessageReceivedEvent> {
 		} catch (IOException | UnsupportedAudioFileException e) {
 			log.warn("MessageReceivedEvent処理中に例外発生", e);
 		}
-	}
-
-	@Override
-	public void handle(final MessageReceivedEvent event) {
-		// TODO Auto-generated method stub
-
 	}
 }
