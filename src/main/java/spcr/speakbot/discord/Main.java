@@ -1,4 +1,4 @@
-package spcr.talkbot.discord;
+package spcr.speakbot.discord;
 import spcr.config.ConfigReader;
 import spcr.config.DiscordConfig;
 import sx.blah.discord.api.ClientBuilder;

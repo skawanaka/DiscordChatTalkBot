@@ -1,4 +1,4 @@
-package spcr.talkbot.discord;
+package spcr.speakbot.discord;
 
 import java.util.List;
 
