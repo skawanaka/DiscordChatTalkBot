@@ -20,7 +20,7 @@ public class Main extends ConfigReader {
 	public void run() {
 		final IDiscordClient client = Main.createClient(this.TOKEN, true);
 		final EventDispatcher dispatcher = client.getDispatcher();
-		dispatcher.registerListener(new Listener());
+		dispatcher.registerListener(new ChannelJoiner());
 	}
 
 	public static IDiscordClient createClient(final String token, final boolean login) {

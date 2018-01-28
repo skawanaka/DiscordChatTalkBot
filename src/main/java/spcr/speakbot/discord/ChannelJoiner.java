@@ -12,10 +12,10 @@ import sx.blah.discord.handle.obj.IGuild;
 import sx.blah.discord.handle.obj.IVoiceChannel;
 
 @Slf4j
-public class Listener extends ConfigReader {
+public class ChannelJoiner extends ConfigReader {
 	private final long voiceChannelId;
 
-	public Listener() {
+	public ChannelJoiner() {
 		final DiscordConfig config = this.configuration.as(DiscordConfig.class);
 		this.voiceChannelId = config.getVoiceChannelId();
 	}
